@@ -24,7 +24,7 @@ int main() {
         for(i = 0; i < strlen(token); i++){
             
             // Ler nome
-            if(isalpha(token[i]) ){
+            if(isalpha(token[i])){
                 
                 /* // Evita acessar além do tamanho do nome
                 if (i < strlen(nome)) { */
@@ -33,9 +33,21 @@ int main() {
             }
             // Ler numero
             // precisa diferencia aqui se é int ou float
+            
             if(isdigit(token[i])){
-                token[i] = numero[i];
+                
+                int numInteiro = atoi(token[i]);   
+                double numDouble = atof(token[i]);
+
+
+            if(numDouble == (double)numInteiro) {
+                 inteiro[i] = token[i];
+                }
+                else{
+                    pontoFlutuante[i] = token[i];
+                }
             }
+            
             if(strncmp(token[i], "(", 1) == 0){
                 token[i] = ponto[i];
             }
@@ -44,5 +56,3 @@ int main() {
     }
     
     
-    
-}
