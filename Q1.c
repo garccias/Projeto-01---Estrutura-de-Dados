@@ -1,3 +1,4 @@
+//Sophia Garcia e Maria Eduarda Souza
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
